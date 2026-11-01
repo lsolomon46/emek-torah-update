@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta property="og:title" content="Torah Studies Update · Emek Hebrew Academy">
+<meta property="og:description" content="A look inside Torah Studies at Emek this fall.">
+<style>:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Torah Studies at Emek</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;700&family=Montserrat:wght@700;800&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Layout: a short, scannable parent update. Logo, a brief note, four big cards, one demo tucked behind a button, a 3-question challenge, sign-off. */
+:root{
+  --bg:#F5F8FF; --surface:#FFFFFF; --ink:#16213A; --muted:#55607A; --line:#D6DEF0;
+  --blue:#1768FC; --navy:#0B1E45; --amber:#FFA519; --amber-soft:#FFF1D9; --blue-soft:#E7EFFF; --on-blue:#FFFFFF;
+  --good:#1F8A5B; --good-bg:#E2F4EA; --bad:#C0392B; --bad-bg:#FBE9E7;
+  --k-letters:#C0392B; --k-letters-bg:#FBE9E7; --k-nikud:#9A6A00; --k-nikud-bg:#FFF1D9; --k-rules:#5B3E96; --k-rules-bg:#EFE8FA;
+  --display:'Montserrat',system-ui,sans-serif;
+  --body:'Nunito Sans',system-ui,-apple-system,sans-serif;
+  --hebrew:'David Libre','Times New Roman',serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0D1528; --surface:#16213A; --ink:#E9EEF8; --muted:#A6B1C7; --line:#2A3858;
+  --blue:#7DA9FF; --navy:#081430; --amber:#FFB43D; --amber-soft:#3A2C12; --blue-soft:#1A2A4D; --on-blue:#0D1528;
+  --good:#7FD3A8; --good-bg:#14301F; --bad:#F2998F; --bad-bg:#3A1D1A;
+  --k-letters:#F2998F; --k-letters-bg:#3A1D1A; --k-nikud:#F0C766; --k-nikud-bg:#352A10; --k-rules:#BCA4EE; --k-rules-bg:#2B2242;
+  color-scheme:dark; } }
+:root[data-theme="dark"]{
+  --bg:#0D1528; --surface:#16213A; --ink:#E9EEF8; --muted:#A6B1C7; --line:#2A3858;
+  --blue:#7DA9FF; --navy:#081430; --amber:#FFB43D; --amber-soft:#3A2C12; --blue-soft:#1A2A4D; --on-blue:#0D1528;
+  --good:#7FD3A8; --good-bg:#14301F; --bad:#F2998F; --bad-bg:#3A1D1A;
+  --k-letters:#F2998F; --k-letters-bg:#3A1D1A; --k-nikud:#F0C766; --k-nikud-bg:#352A10; --k-rules:#BCA4EE; --k-rules-bg:#2B2242;
+  color-scheme:dark; }
+
+*{box-sizing:border-box}
+body{background:var(--bg); color:var(--ink); font-family:var(--body); font-size:17px; line-height:1.55;}
+.wrap{max-width:760px; margin:0 auto; padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px)); padding-block:0;}
+h1,h2,h3{font-family:var(--display); text-wrap:balance; margin:0; color:var(--ink);}
+p{margin:0}
+
+.mast{background:var(--surface); border-bottom:4px solid var(--amber);}
+.mast .wrap{padding-block:16px;}
+.logo{height:62px; width:auto; max-width:100%; display:block; border-radius:8px;}
+
+.hero{padding-block:36px 4px;}
+.eyebrow{font-family:var(--display); font-size:12px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--blue);}
+.hero h1{font-size:clamp(28px, 6vw, 40px); line-height:1.15; font-weight:800; margin-top:8px;}
+.hero h1 em{font-style:normal; color:var(--blue);}
+.note{margin-top:16px; font-size:17.5px; color:var(--muted); max-width:60ch;}
+
+/* four cards */
+.cards{display:grid; gap:14px; margin-top:28px; grid-template-columns:1fr 1fr;}
+.card{background:var(--surface); border:1.5px solid var(--line); border-radius:18px; padding:20px; min-width:0; display:flex; flex-direction:column; gap:10px;}
+.ico{width:52px; height:52px; border-radius:14px; background:var(--blue-soft); color:var(--blue); display:grid; place-items:center;}
+.ico.amber{background:var(--amber-soft); color:var(--amber);}
+.ico svg{width:28px; height:28px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round;}
+.card h2{font-size:19px; font-weight:800; line-height:1.25;}
+.card p{font-size:15.5px; color:var(--muted);}
+.next{display:flex; flex-wrap:wrap; align-items:center; gap:6px; font-size:13.5px; font-weight:700; color:var(--muted);}
+.pill{border-radius:20px; padding:2px 10px; background:var(--blue-soft); color:var(--blue);}
+.pill.now{background:var(--blue); color:var(--on-blue);}
+.btn{font-family:var(--body); font-weight:700; font-size:15px; border-radius:12px; padding:10px 16px; cursor:pointer; border:1.5px solid var(--blue); background:none; color:var(--blue); align-self:flex-start;}
+.btn.solid{background:var(--blue); color:var(--on-blue);}
+.btn:focus-visible,.w:focus-visible,.opt:focus-visible{outline:3px solid var(--amber); outline-offset:2px;}
+
+/* demo panel */
+.demo{margin-top:14px; background:var(--surface); border:1.5px solid var(--line); border-radius:18px; overflow:hidden;}
+.bar{background:var(--navy); color:#fff; display:flex; align-items:center; gap:10px; padding:10px 16px; font-size:13px; font-weight:700;}
+.bar .dot{width:9px; height:9px; border-radius:50%; background:var(--amber); flex:0 0 9px;}
+.bar .sample{margin-left:auto; font-weight:600; opacity:.85; text-align:right;}
+.body{padding:18px;}
+.howto{font-size:15px; color:var(--muted);}
+.passage{direction:rtl; font-family:var(--hebrew); font-size:clamp(24px, 5.2vw, 30px); line-height:2.2; margin-top:10px; padding:10px 4px; border-top:1px dashed var(--line); border-bottom:1px dashed var(--line);}
+.w{display:inline-block; padding:0 5px; border-radius:7px; border:none; background:none; font:inherit; color:var(--ink); cursor:pointer; border-bottom:3px solid transparent; line-height:1.6;}
+.w.letters{color:var(--k-letters); background:var(--k-letters-bg); border-bottom-color:var(--k-letters);}
+.w.nikud{color:var(--k-nikud); background:var(--k-nikud-bg); border-bottom-color:var(--k-nikud);}
+.w.rules{color:var(--k-rules); background:var(--k-rules-bg); border-bottom-color:var(--k-rules);}
+.w.gen{color:var(--muted); background:var(--bg); border-bottom-color:var(--muted);}
+.plan{margin-top:14px; display:grid; gap:8px;}
+.plan h3{font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--blue);}
+.chips{display:flex; flex-wrap:wrap; gap:8px;}
+.chip{font-size:14px; border:1.5px solid var(--line); border-radius:20px; padding:4px 12px; background:var(--bg);}
+.empty{font-size:14.5px; color:var(--muted);}
+.foot{display:flex; flex-wrap:wrap; align-items:center; gap:10px 16px; margin-top:14px; padding-top:12px; border-top:1px solid var(--line);}
+.foot small{color:var(--muted); font-size:13px; flex:1; min-width:200px;}
+
+/* quiz */
+section{padding-block:40px 4px;}
+section > h2{font-size:24px; font-weight:800;}
+section > .sub{color:var(--muted); margin-top:6px;}
+.qcount{font-family:var(--display); font-size:12px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--muted);}
+.qtext{font-size:19px; font-weight:700; margin-top:6px; line-height:1.4;}
+.opts{display:grid; gap:10px; margin-top:14px; grid-template-columns:1fr 1fr;}
+.opt{font:inherit; font-size:17px; font-weight:600; text-align:left; padding:13px 16px; border-radius:14px; border:1.5px solid var(--line); background:var(--bg); color:var(--ink); cursor:pointer; min-width:0;}
+.opt:hover:not(:disabled){border-color:var(--blue);}
+.opt .he{font-family:var(--hebrew); font-size:22px;}
+.opt.right{border-color:var(--good); background:var(--good-bg); color:var(--good); font-weight:800;}
+.opt.wrong{border-color:var(--bad); background:var(--bad-bg); color:var(--bad);}
+.opt:disabled{cursor:default;}
+.explain{margin-top:12px; font-size:15.5px; color:var(--muted);}
+.score{font-family:var(--display); font-size:46px; font-weight:800; color:var(--blue); line-height:1; font-variant-numeric:tabular-nums;}
+.result h3{font-size:21px; margin-top:8px;}
+
+.close{padding-block:36px 48px; font-size:16.5px; color:var(--muted); max-width:60ch;}
+.close p + p{margin-top:16px;}
+.close b{display:block; color:var(--ink); font-family:var(--display); font-size:16px;}
+.contact{user-select:all; color:var(--blue); font-weight:700;}
+
+
+/* map sample */
+.tabs{display:flex; flex-wrap:wrap; gap:8px;}
+.tab{font:inherit; font-size:14.5px; font-weight:700; padding:7px 14px; border-radius:20px; border:1.5px solid var(--line); background:none; color:var(--ink); cursor:pointer;}
+.tab[aria-selected="true"]{background:var(--blue); border-color:var(--blue); color:var(--on-blue);}
+.tab:focus-visible{outline:3px solid var(--amber); outline-offset:2px;}
+.weeks{display:grid; gap:10px; margin-top:14px;}
+.wk{border:1.5px solid var(--line); border-radius:14px; padding:12px 14px; display:grid; grid-template-columns:72px 1fr; gap:12px; align-items:start;}
+.wk.cur{border-color:var(--amber); background:var(--amber-soft);}
+.wk .wn{font-family:var(--display); font-weight:800; font-size:13px; color:var(--muted); line-height:1.3;}
+.wk .wn span{display:block; font-family:var(--body); font-weight:700; font-size:12px; color:var(--amber);}
+.items{display:grid; gap:6px; min-width:0;}
+.it{display:flex; gap:8px; align-items:baseline; font-size:14.5px; min-width:0;}
+.sj{flex:0 0 auto; font-size:11.5px; font-weight:800; text-transform:uppercase; letter-spacing:.05em; border-radius:6px; padding:1px 7px;}
+.sj.ch{background:var(--blue-soft); color:var(--blue);}
+.sj.ha{background:var(--good-bg); color:var(--good);}
+.sj.kr{background:var(--k-letters-bg); color:var(--k-letters);}
+.sj.ge{background:var(--k-rules-bg); color:var(--k-rules);}
+.sj.as{background:var(--amber-soft); color:var(--k-nikud);}
+/* tool screens */
+.shots{display:grid; gap:14px; grid-template-columns:1fr 1fr;}
+.shot{margin:0; min-width:0;}
+.shot figcaption{font-size:14px; color:var(--muted); margin-top:8px; line-height:1.45;}
+.shot figcaption b{display:block; color:var(--ink); font-family:var(--display); font-size:14.5px;}
+.screen{height:150px; border-radius:14px; padding:12px; overflow:hidden; display:flex; flex-direction:column; justify-content:center; gap:8px;}
+.he{font-family:var(--hebrew); direction:rtl;}
+.s-rec{background:var(--k-rules-bg); color:var(--k-rules);}
+.s-rec .daf{font-size:13px; opacity:.8; text-align:center;}
+.s-rec .gtext{font-size:19px; text-align:center; color:var(--ink);}
+.recrow{display:flex; align-items:center; gap:10px; justify-content:center;}
+.recbtn{width:30px; height:30px; border-radius:50%; background:var(--bad); box-shadow:0 0 0 4px var(--bad-bg);}
+.wave{display:flex; align-items:center; gap:3px; height:28px;}
+.wave i{display:block; width:4px; border-radius:2px; background:var(--k-rules);}
+.recrow .time{font-family:var(--display); font-size:13px; font-weight:700; font-variant-numeric:tabular-nums;}
+.s-arc{background:var(--navy); color:#fff; text-align:center;}
+.arc-top{display:flex; justify-content:space-between; font-family:var(--display); font-size:11.5px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; color:#FFB43D;}
+.arc-word{font-size:28px; font-weight:700;}
+.arc-q{font-size:12px; opacity:.8;}
+.arc-opts{display:flex; gap:6px; justify-content:center;}
+.arc-opts span{background:rgba(255,255,255,.12); border-radius:8px; padding:3px 10px; font-size:17px;}
+.arc-opts span.hit{background:#FFB43D; color:#16213A; font-weight:700;}
+.s-sea{background:var(--blue-soft); align-items:center;}
+.sea-line{font-size:27px; color:var(--ink);}
+.sea-line .lit{background:var(--amber); color:#16213A; border-radius:6px; padding:0 4px;}
+.sea-pop{font-size:13px; background:var(--surface); border:1.5px solid var(--line); border-radius:10px; padding:5px 10px; color:var(--muted);}
+.sea-pop b{font-family:var(--hebrew); color:var(--ink); font-size:16px;}
+.s-jep{background:var(--navy); gap:5px;}
+.jep-h,.jep-g{display:grid; grid-template-columns:repeat(3,1fr); gap:5px;}
+.jep-h span{font-family:var(--display); font-size:10.5px; font-weight:800; text-transform:uppercase; color:#fff; text-align:center; letter-spacing:.04em;}
+.jep-g span{background:#1768FC; color:#FFB43D; font-family:var(--display); font-weight:800; font-size:14px; text-align:center; border-radius:6px; padding:7px 0;}
+.jep-g span.done{background:rgba(255,255,255,.12);}
+@media (max-width:620px){ .shots{grid-template-columns:1fr;} .wk{grid-template-columns:1fr; gap:6px;} }
+
+/* real screenshots */
+.real{margin:0; min-width:0;}
+.real img{display:block; width:100%; max-width:100%; height:auto; border-radius:10px; border:1.5px solid var(--line);}
+.scrollimg{overflow-x:auto;}
+.scrollimg img{min-width:560px;}
+.real figcaption{font-size:14.5px; color:var(--muted); margin-top:10px; line-height:1.5;}
+.real figcaption b{display:block; color:var(--ink); font-family:var(--display); font-size:15px;}
+.reals{display:grid; gap:18px;}
+.also{margin-top:16px; padding-top:12px; border-top:1px solid var(--line); font-size:14.5px; color:var(--muted);}
+
+@media (max-width:620px){
+  .cards{grid-template-columns:1fr;}
+  .opts{grid-template-columns:1fr;}
+  .logo{height:50px;}
+}
+@media (prefers-reduced-motion:no-preference){ .w,.opt{transition:background .15s, color .15s, border-color .15s;} }
+</style>
+
+</head><body>
+<header class="mast">
+  <div class="wrap">
+    <img class="logo" alt="Emek Hebrew Academy, Teichman Family Torah Center" src="img/logo.jpg" width="440" height="200">
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <div class="eyebrow">Torah Studies Update · Fall 2026</div>
+    <h1>The year is off to a <em>tremendous</em> start.</h1>
+    <p class="note">Every few months we will share a short update, so you can see what is happening in Torah Studies across the school. Here is a quick look at what we are building this year.</p>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></svg></div>
+      <h2>A Map for Every Grade</h2>
+      <p>Every grade has a Curriculum Map that lays out, week by week, what is taught in Kriah, Chumash, Halacha, Yedios Klaliot and Parsha. Teachers plan together on it, and we use it to make sure every class stays on track.</p>
+      <button type="button" class="btn tg" data-target="mapdemo" data-open="Hide samples" data-closed="See samples" aria-expanded="false" aria-controls="mapdemo">See samples</button>
+    </div>
+
+    <div class="card">
+      <div class="ico amber" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3c1.6 2 2.2 3.4 2.2 4.6A2.2 2.2 0 0 1 12 9.8a2.2 2.2 0 0 1-2.2-2.2C9.8 6.4 10.4 5 12 3z"/><path d="M10 12h4v9h-4z"/><path d="M6 21h12"/></svg></div>
+      <h2>A School-Wide Shabbos Curriculum</h2>
+      <p>We built clear Shabbos standards for every grade, Pre-1st through 8th, and teachers follow a week-by-week lesson plan. The unit ends with a school-wide assessment. We then review the results and gather teacher feedback to make the next unit even stronger.</p>
+      <div class="next"><span class="pill now">Shabbos</span><span aria-hidden="true">→</span><span class="pill">Chanukah</span><span aria-hidden="true">→</span><span class="pill">Brachos</span></div>
+    </div>
+
+    <div class="card">
+      <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 11l2 2 4-4"/><path d="M5 4h14v16H5z"/><path d="M9 17h6"/></svg></div>
+      <h2>Every Child Assessed</h2>
+      <p>Every child in grades 2–8 reads one-on-one with a teacher using our new Kriah (Hebrew reading) app, which shows exactly which reading skills are strong and which need practice. Each class then follows an action plan, and we reassess in the winter and spring to track every child's growth.</p>
+      <button type="button" class="btn tg" data-target="demo" data-open="Hide the demo" data-closed="See how it works" aria-expanded="false" aria-controls="demo">See how it works</button>
+    </div>
+
+    <div class="card">
+      <div class="ico amber" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 12h4M8 10v4"/><circle cx="15" cy="11" r="1"/><circle cx="17.5" cy="13.5" r="1"/><path d="M7 6h10a4 4 0 0 1 4 4v3a4 4 0 0 1-7 2.6l-.6-.6h-2.8l-.6.6A4 4 0 0 1 3 13v-3a4 4 0 0 1 4-4z"/></svg></div>
+      <h2>Practical and Active Learning</h2>
+      <p>Interactive Chumash lessons on the smartboard, review games before each Yom Tov, and digital tools that help teachers use assessment data to plan their next steps.</p>
+      <button type="button" class="btn tg" data-target="tooldemo" data-open="Hide samples" data-closed="See samples" aria-expanded="false" aria-controls="tooldemo">See samples</button>
+    </div>
+  </div>
+
+  <div class="demo" id="mapdemo" hidden>
+    <div class="bar"><span class="dot" aria-hidden="true"></span>Torah Studies Curriculum Map<span class="sample">Real screen · 3rd Grade</span></div>
+    <div class="body">
+      <figure class="real"><div class="scrollimg"><img src="img/map.jpg" alt="The 3rd grade Curriculum Map, showing each week's plan for Kriah, Chumash, Halacha and Yedios Klaliot"></div>
+      <figcaption>Every grade has a map like this. Each week lists what is taught in Kriah, Chumash, Halacha, Yedios Klaliot and Parsha, with the lesson materials and assessments linked right in.</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="demo" id="tooldemo" hidden>
+    <div class="bar"><span class="dot" aria-hidden="true"></span>In our classrooms<span class="sample">Real screens</span></div>
+    <div class="body">
+      <div class="reals">
+        <figure class="real"><img src="img/lesson.jpg" alt="An interactive Chumash Skills Lab lesson on the Akeidah, teaching the vav hahipuch">
+          <figcaption><b>Interactive Chumash lessons</b>Step-by-step lesson boards for the smartboard, teaching skills like the vav hahipuch right from the pesukim.</figcaption></figure>
+        <figure class="real"><img src="img/game.jpg" alt="The Yemei Ha'Din review game board with categories like Chodesh Elul and The Shofar">
+          <figcaption><b>Review games</b>Classes review before each Yom Tov with team games built around what they learned.</figcaption></figure>
+      </div>
+      <p class="also">We also use technology for assessments and data, like the Kriah app shown in "Every Child Assessed," so teachers can see each child's needs and plan the next step.</p>
+    </div>
+  </div>
+
+  <div class="demo" id="demo" hidden>
+    <div class="bar"><span class="dot" aria-hidden="true"></span>Teacher view<span class="sample">Sample · not the real exam</span></div>
+    <div class="body">
+      <p class="howto">The teacher taps each word a child misreads. Try it: tap a word.</p>
+      <div class="passage" id="passage" aria-label="Sample Hebrew passage. Each word is a button."></div>
+      <div class="plan" aria-live="polite">
+        <h3>Action plan: skills to practice</h3>
+        <div class="chips" id="chips"></div>
+      </div>
+      <div class="foot">
+        <button class="btn" id="reset" type="button">Clear</button>
+        <small>The app turns each mistake into a specific skill, so practice goes exactly where it is needed.</small>
+      </div>
+    </div>
+  </div>
+
+  <section id="try">
+    <h2>Try it yourself</h2>
+    <p class="sub">Three quick questions from what our children are learning this fall.</p>
+    <div class="demo">
+      <div class="bar"><span class="dot" aria-hidden="true"></span>Parent challenge<span class="sample" id="qprog">1 of 3</span></div>
+      <div class="body" id="quiz" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <div class="close">
+    <p>Thank you for your continued support and partnership. When home and school work together, our children thrive.</p>
+    <p>With appreciation,<b>Rabbi Levi Solomon, Principal</b>Questions? <span class="contact">lsolomon@emek.org</span></p>
+  </div>
+</main>
+
+<script>
+(function(){
+  /* toggles: one sample panel open at a time */
+  const tgs=[...document.querySelectorAll(".tg")];
+  tgs.forEach(t=>t.addEventListener("click",()=>{
+    const panel=document.getElementById(t.dataset.target), open=panel.hidden;
+    tgs.forEach(o=>{ document.getElementById(o.dataset.target).hidden=true; o.setAttribute("aria-expanded","false"); o.textContent=o.dataset.closed; });
+    if(open){ panel.hidden=false; t.setAttribute("aria-expanded","true"); t.textContent=t.dataset.open;
+      panel.scrollIntoView({behavior:"smooth",block:"nearest"}); }
+  }));
+
+
+
+  /* Kriah demo */
+  const SKILL={
+    D:["nikud","Cholam and shuruk (וֹ / וּ)"], E:["letters","Look-alike letters (ח / ה)"],
+    F:["letters","Final letters (ך ם ן ף ץ)"], G:["rules","Patach ganuva (as in רוּחַ)"],
+    H:["rules","Silent hei at the end of a word"], I:["nikud","Sounded and silent yud"],
+    J:["nikud","Double-duty cholam (as in מֹשֶׁה)"], K:["rules","Articulated vav (as in מִצְוֹת)"],
+    L:["rules","Shva na and shva nach"], Ch:["nikud","Chataf vowels (as in אֲ)"], Gen:["gen","General word reading"]
+  };
+  const WORDS=[
+    ["מֹשֶׁה","J"],["הוֹלֵךְ","D"],["לְבֵית","Gen"],["הַכְּנֶסֶת","L"],["וְשׁוֹמֵעַ","G"],["אֶת","Gen"],["הַתְּפִלָּה","L"],["בְּשִׂמְחָה.","L"],
+    ["אַחַר","E"],["כָּךְ","F"],["הוּא","D"],["אוֹכֵל","D"],["תַּפּוּחַ","G"],["עִם","F"],["אֶחָיו","I"],["וּמְבָרֵךְ","D"],["בְּרָכָה.","H"]
+  ];
+  const box=document.getElementById("passage"), marked=new Set([4,14]);
+  WORDS.forEach(([w],i)=>{
+    const b=document.createElement("button"); b.type="button"; b.className="w"; b.textContent=w; b.id="w"+i;
+    b.addEventListener("click",()=>{ marked.has(i)?marked.delete(i):marked.add(i); render(); });
+    box.appendChild(b); box.appendChild(document.createTextNode(" "));
+  });
+  function render(){
+    const skills={};
+    WORDS.forEach(([w,k],i)=>{
+      const btn=document.getElementById("w"+i), on=marked.has(i);
+      btn.className="w"+(on?" "+SKILL[k][0]:""); btn.setAttribute("aria-pressed",on?"true":"false");
+      if(on) skills[k]=(skills[k]||0)+1;
+    });
+    const list=Object.entries(skills).sort((a,b)=>b[1]-a[1]);
+    document.getElementById("chips").innerHTML=list.length
+      ? list.map(([k])=>`<span class="chip">${SKILL[k][1]}</span>`).join("")
+      : `<span class="empty">Tap a word above to build the plan.</span>`;
+  }
+  document.getElementById("reset").addEventListener("click",()=>{ marked.clear(); render(); });
+  render();
+
+  /* Parent challenge */
+  const Q=[
+    {area:"Hilchos Shabbos", q:"How many main categories of melacha (creative work) are forbidden on Shabbos?", opts:["10","18","39","613"], a:2,
+     why:"There are 39 melachos, learned from the work done to build the Mishkan."},
+    {area:"Chumash", q:'Which shoresh (root) means "to go"?', he:true, opts:["ה.ל.כ","ש.מ.ר","א.כ.ל","ב.ר.כ"], a:0,
+     why:"ה.ל.כ is the root of words like הוֹלֵךְ (walking) and וַיֵּלֶךְ (and he went)."},
+    {area:"Hilchos Shabbos", q:"What do we call an item we may not move on Shabbos?", opts:["Muktzeh","Mitzvah","Melacha","Bracha"], a:0,
+     why:"Muktzeh means \"set aside.\" Money and pens, for example, are muktzeh on Shabbos."}
+  ];
+  const el=document.getElementById("quiz"), prog=document.getElementById("qprog");
+  let i=0, score=0;
+  function show(){
+    const it=Q[i]; prog.textContent=`${i+1} of ${Q.length}`;
+    el.innerHTML=`<div class="qcount">${it.area}</div><p class="qtext">${it.q}</p>
+      <div class="opts">${it.opts.map((o,j)=>`<button type="button" class="opt" id="opt${j}" data-j="${j}">${it.he?`<span class="he">${o}</span>`:o}</button>`).join("")}</div><div id="after"></div>`;
+    el.querySelectorAll(".opt").forEach(b=>b.addEventListener("click",()=>answer(+b.dataset.j)));
+  }
+  function answer(j){
+    const it=Q[i];
+    el.querySelectorAll(".opt").forEach(b=>{ const k=+b.dataset.j; b.disabled=true;
+      if(k===it.a) b.classList.add("right"); else if(k===j) b.classList.add("wrong"); });
+    if(j===it.a) score++;
+    const last=i===Q.length-1;
+    document.getElementById("after").innerHTML=`<p class="explain"><b>${j===it.a?"Correct!":"Not quite."}</b> ${it.why}</p>
+      <div class="foot"><button type="button" class="btn solid" id="next">${last?"See my score":"Next"}</button></div>`;
+    document.getElementById("next").addEventListener("click",()=>{ i++; i<Q.length?show():done(); });
+  }
+  function done(){
+    prog.textContent="Done";
+    const msg=score===3?"Your child would be proud!":score===2?"Nicely done!":"A great reason to ask your child to teach you this week!";
+    el.innerHTML=`<div class="result"><div class="score">${score}/3</div><h3>${msg}</h3>
+      <div class="foot"><button type="button" class="btn" id="again">Try again</button></div></div>`;
+    document.getElementById("again").addEventListener("click",()=>{ i=0; score=0; show(); });
+  }
+  show();
+})();
+</script>
+
+</body></html>
