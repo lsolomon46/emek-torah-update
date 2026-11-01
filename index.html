@@ -167,6 +167,46 @@ section > .sub{color:var(--muted); margin-top:6px;}
 .reals{display:grid; gap:18px;}
 .also{margin-top:16px; padding-top:12px; border-top:1px solid var(--line); font-size:14.5px; color:var(--muted);}
 
+/* kriah detail */
+.kh{font-family:var(--display); font-size:15px; font-weight:800; margin:26px 0 0; color:var(--ink);}
+.how{display:grid; gap:12px; margin-top:10px; grid-template-columns:1fr 1fr;}
+.howc{border:1.5px solid var(--line); border-radius:12px; padding:14px; min-width:0;}
+.howc b{display:block; margin-top:8px; font-size:15.5px;}
+.howc p{font-size:14.5px; color:var(--muted); margin-top:4px;}
+.gtag{display:inline-block; font-size:12px; font-weight:800; color:var(--on-blue); background:var(--blue); border-radius:20px; padding:2px 10px;}
+.research{font-size:15px; color:var(--muted); margin-top:8px;}
+.report{margin-top:10px; border:1.5px solid var(--line); border-radius:14px; padding:16px; background:var(--bg);}
+.rhead{display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:8px;}
+.rhead b{display:block; font-family:var(--display); font-size:16px;}
+.rhead span{font-size:13.5px; color:var(--muted);}
+.rgrade{font-size:14px; background:var(--surface); border:1.5px solid var(--line); border-radius:20px; padding:4px 12px;}
+.rgrade b{display:inline; color:var(--good);}
+.rlabel{font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin-top:14px;}
+.rr{direction:rtl; font-size:clamp(21px,4.6vw,26px); line-height:2.3; background:var(--surface); border-radius:10px; padding:8px 12px; margin-top:6px;}
+.rr span{position:relative; padding:0 3px; border-radius:5px;}
+.rr i{position:absolute; top:-15px; left:50%; transform:translateX(-50%); font-family:var(--body); font-style:normal; font-size:11px; font-weight:800;}
+.m-err{background:var(--k-letters-bg); color:var(--k-letters);} .m-err i{color:var(--k-letters);}
+.m-sc{background:var(--k-nikud-bg); color:var(--k-nikud);} .m-sc i{color:var(--k-nikud);}
+.m-skip{text-decoration:line-through; color:var(--muted);} .m-skip i{color:var(--muted);}
+.legend{display:flex; flex-wrap:wrap; gap:6px 16px; font-size:13px; color:var(--muted); margin-top:8px;}
+.lg{display:inline-block; width:10px; height:10px; border-radius:3px; margin-right:5px; vertical-align:-1px;}
+.lg.err{background:var(--k-letters);} .lg.sc{background:var(--k-nikud);} .lg.skip{background:var(--muted);}
+.rgrid{display:grid; gap:12px; grid-template-columns:1fr 1fr; margin-top:14px;}
+.rbox{background:var(--surface); border:1.5px solid var(--line); border-radius:12px; padding:12px 14px; min-width:0; font-size:14.5px;}
+.rbox ul{margin:6px 0 0; padding-left:18px;}
+.rbox p{font-size:13px; color:var(--muted); margin-top:6px;}
+.bars{display:flex; align-items:flex-end; gap:16px; height:110px; margin-top:8px; padding-bottom:18px;}
+.bar1{flex:1; height:100%; position:relative; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; gap:3px;}
+.bar1 span{display:block; width:100%; flex:0 0 auto; max-width:44px; background:var(--blue); border-radius:6px 6px 0 0;}
+.bar1 em{font-style:normal; font-family:var(--display); font-weight:800; font-size:13px; font-variant-numeric:tabular-nums;}
+.bar1 small{position:absolute; bottom:-18px; font-size:12px; color:var(--muted);}
+.rnote{font-size:12.5px; color:var(--muted); margin-top:12px;}
+@media (max-width:620px){ .how,.rgrid{grid-template-columns:1fr;} }
+
+.card.wide{grid-column:1/-1;}
+.goal{color:var(--ink);}
+.port{display:flex; flex-wrap:wrap; gap:6px; font-size:13.5px; font-weight:700;}
+
 @media (max-width:620px){
   .cards{grid-template-columns:1fr;}
   .opts{grid-template-columns:1fr;}
@@ -184,15 +224,15 @@ section > .sub{color:var(--muted); margin-top:6px;}
 
 <main class="wrap">
   <div class="hero">
-    <div class="eyebrow">Torah Studies Update · Fall 2026</div>
-    <h1>The year is off to a <em>tremendous</em> start.</h1>
-    <p class="note">Every few months we will share a short update, so you can see what is happening in Torah Studies across the school. Here is a quick look at what we are building this year.</p>
+    <div class="eyebrow">Torah Studies · See It in Action</div>
+    <h1>Take a <em>hands-on</em> look inside our classrooms.</h1>
+    <p class="note">Tap the buttons below to see real screens from our Curriculum Map and lessons, try the Kriah assessment for yourself, and take a quick 3-question challenge.</p>
   </div>
 
   <div class="cards">
     <div class="card">
       <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></svg></div>
-      <h2>A Map for Every Grade</h2>
+      <h2>A Curriculum Map for Every Grade</h2>
       <p>Every grade has a Curriculum Map that lays out, week by week, what is taught in Kriah, Chumash, Halacha, Yedios Klaliot and Parsha. Teachers plan together on it, and we use it to make sure every class stays on track.</p>
       <button type="button" class="btn tg" data-target="mapdemo" data-open="Hide samples" data-closed="See samples" aria-expanded="false" aria-controls="mapdemo">See samples</button>
     </div>
@@ -206,7 +246,7 @@ section > .sub{color:var(--muted); margin-top:6px;}
 
     <div class="card">
       <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 11l2 2 4-4"/><path d="M5 4h14v16H5z"/><path d="M9 17h6"/></svg></div>
-      <h2>Every Child Assessed</h2>
+      <h2>Kriah: Every Child Assessed</h2>
       <p>Every child in grades 2–8 reads one-on-one with a teacher using our new Kriah (Hebrew reading) app, which shows exactly which reading skills are strong and which need practice. Each class then follows an action plan, and we reassess in the winter and spring to track every child's growth.</p>
       <button type="button" class="btn tg" data-target="demo" data-open="Hide the demo" data-closed="See how it works" aria-expanded="false" aria-controls="demo">See how it works</button>
     </div>
@@ -216,6 +256,16 @@ section > .sub{color:var(--muted); margin-top:6px;}
       <h2>Practical and Active Learning</h2>
       <p>Interactive Chumash lessons on the smartboard, review games before each Yom Tov, and digital tools that help teachers use assessment data to plan their next steps.</p>
       <button type="button" class="btn tg" data-target="tooldemo" data-open="Hide samples" data-closed="See samples" aria-expanded="false" aria-controls="tooldemo">See samples</button>
+    </div>
+
+    <div class="card wide">
+      <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+      <h2>A Focus on Data and Growth</h2>
+      <p>This year we are piloting a skills-growth program in upper elementary that will be moving into middle school. Through individualized assessments, we follow each child's growth in core reading, writing and Chumash skills, such as gematria, shorashim, prefixes and suffixes, reading Rashi, and Ksiva (Hebrew writing). Much of it is aligned to the JSAT standards.</p>
+      <p><b class="goal">Our goal:</b> a growth portfolio for every child, similar to MAP testing, bringing together Kriah, Chumash and, for middle school boys, Gemara. It will give a fuller picture of where each child is holding and where there is room to grow over time.</p>
+      <div class="port" aria-label="What the portfolio will bring together">
+        <span class="pill now">Kriah</span><span class="pill now">Chumash</span><span class="pill now">JSAT standards</span><span class="pill">Gemara (MS boys)</span>
+      </div>
     </div>
   </div>
 
@@ -236,7 +286,7 @@ section > .sub{color:var(--muted); margin-top:6px;}
         <figure class="real"><img src="game.jpg" alt="The Yemei Ha'Din review game board with categories like Chodesh Elul and The Shofar">
           <figcaption><b>Review games</b>Classes review before each Yom Tov with team games built around what they learned.</figcaption></figure>
       </div>
-      <p class="also">We also use technology for assessments and data, like the Kriah app shown in "Every Child Assessed," so teachers can see each child's needs and plan the next step.</p>
+      <p class="also">We also use technology for assessments and data, like the Kriah app shown above, so teachers can see each child's needs and plan the next step.</p>
     </div>
   </div>
 
@@ -252,6 +302,37 @@ section > .sub{color:var(--muted); margin-top:6px;}
       <div class="foot">
         <button class="btn" id="reset" type="button">Clear</button>
         <small>The app turns each mistake into a specific skill, so practice goes exactly where it is needed.</small>
+      </div>
+
+      <h3 class="kh">How the assessment works</h3>
+      <div class="how">
+        <div class="howc"><span class="gtag">Grade 2</span><b>Decoding check</b><p>Your child reads letters, vowels and words, level by level. There is no timer. The goal is accuracy, so we see exactly which sounds and vowels are solid.</p></div>
+        <div class="howc"><span class="gtag">Grades 3–8</span><b>Reading fluency</b><p>Your child reads a word list all the way through, then two short passages for one minute each: one familiar and one new. We measure accuracy and words read correctly per minute.</p></div>
+      </div>
+
+      <h3 class="kh">The research behind it</h3>
+      <p class="research">Short one-minute reading checks and running records are among the most widely used and studied ways to measure reading growth. Listening to a child read aloud shows both accuracy and fluency, the foundations for understanding what they read.</p>
+
+      <h3 class="kh">What happens after: a sample student report</h3>
+      <div class="report">
+        <div class="rhead"><div><b>Sample Student</b><span>Grade 4 · Fall Kriah Assessment</span></div><span class="rgrade">Progress grade: <b>G</b></span></div>
+        <p class="rlabel">Running record · new passage</p>
+        <div class="rr he" aria-label="Sample running record with marked words">
+          <span>מֹשֶׁה</span> <span>הוֹלֵךְ</span> <span>לְבֵית</span> <span>הַכְּנֶסֶת</span> <span class="m-err" title="Misread">וְשׁוֹמֵעַ<i>✕</i></span> <span>אֶת</span> <span class="m-sc" title="Self-corrected">הַתְּפִלָּה<i>SC</i></span> <span>בְּשִׂמְחָה.</span>
+          <span>אַחַר</span> <span>כָּךְ</span> <span>הוּא</span> <span>אוֹכֵל</span> <span class="m-err" title="Misread">תַּפּוּחַ<i>✕</i></span> <span>עִם</span> <span class="m-skip" title="Skipped">אֶחָיו<i>–</i></span> <span>וּמְבָרֵךְ</span> <span>בְּרָכָה.</span>
+        </div>
+        <div class="legend"><span><i class="lg err"></i>Misread</span><span><i class="lg sc"></i>Self-corrected</span><span><i class="lg skip"></i>Skipped</span></div>
+        <div class="rgrid">
+          <div class="rbox"><b>Skills to practice</b><ul><li>Patach ganuva (as in רוּחַ)</li><li>Sounded and silent yud</li></ul><p>Practice pages are built from these exact skills.</p></div>
+          <div class="rbox"><b>Growth across the year</b>
+            <div class="bars" aria-label="Sample growth: Fall 42, Winter 51, Spring 60 words correct per minute">
+              <div class="bar1"><span style="height:56%"></span><em>42</em><small>Fall</small></div>
+              <div class="bar1"><span style="height:68%"></span><em>51</em><small>Winter</small></div>
+              <div class="bar1"><span style="height:80%"></span><em>60</em><small>Spring</small></div>
+            </div>
+            <p>Words read correctly per minute</p></div>
+        </div>
+        <p class="rnote">Sample only. Real reports go to teachers, who use them to plan each child's next steps.</p>
       </div>
     </div>
   </div>
